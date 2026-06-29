@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 16,
+  "fontFamily": "Inter",
+  "comments": [
+    {
+      "id": "comment-thread-v16",
+      "projectId": "fixture-project-v16",
+      "target": {
+        "type": "element",
+        "frameId": "frame-fixture-v16",
+        "elementId": "copy-v16",
+        "x": 12,
+        "y": 18
+      },
+      "body": "Resolve the comment fixture",
+      "messages": [
+        {
+          "id": "comment-message-v16",
+          "authorName": "Fixture Reviewer",
+          "body": "Resolve the comment fixture",
+          "createdAt": 1710001000000
+        }
+      ],
+      "resolved": false,
+      "status": "queued",
+      "createdAt": 1710001000000,
+      "updatedAt": 1710001000000
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-fixture-v16",
+      "name": "Fixture Comments",
+      "filename": "comments.html",
+      "x": 0,
+      "y": 0,
+      "width": 640,
+      "height": 420,
+      "background": "#f8fafc",
+      "elements": [
+        {
+          "id": "copy-v16",
+          "type": "text",
+          "x": 40,
+          "y": 48,
+          "width": 300,
+          "height": 56,
+          "content": "Comment target",
+          "color": "#111827",
+          "background": "transparent",
+          "borderRadius": 0,
+          "fontSize": 28,
+          "fontWeight": "700",
+          "targetFrameId": null
+        }
+      ]
+    }
+  ],
+  "orphanElements": []
+}

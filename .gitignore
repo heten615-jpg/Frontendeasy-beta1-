@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# Secrets — only the .env.example template is committed
+.env
+.env.*
+!.env.example
+
+# Automation artifacts — replaced by git history
+AGENT_AUTONOMY/runs/
+AGENT_AUTONOMY/goal-runs/
+
+# Playwright local output
+playwright-report/
+test-results/
+
+# Agent/private working context — keep local, never publish
+AGENT_AUTONOMY/
+CLAUDE.md
+AGENTS.md
+TASKS.md
+TASK_QUEUE.md
+STATE.md
+RUNBOOK.md
+CHECKLIST.md
+*handoff*.md
+*Handoff*.md
+фикс багов.md

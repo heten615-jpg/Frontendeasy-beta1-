@@ -1,0 +1,26 @@
+{
+  "name": "@frontendeasy/mcp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Dev-only local MCP bridge skeleton for Frontendeasy. Not imported by the browser app.",
+  "bin": {
+    "frontendeasy-mcp": "./server.mjs"
+  },
+  "exports": {
+    ".": null,
+    "./server.mjs": null
+  },
+  "browser": {
+    "./server.mjs": false
+  },
+  "scripts": {
+    "start": "node ./server.mjs",
+    "test": "node ./server.test.mjs",
+    "check": "npm run test && node ./server.mjs --self-check"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {}
+}

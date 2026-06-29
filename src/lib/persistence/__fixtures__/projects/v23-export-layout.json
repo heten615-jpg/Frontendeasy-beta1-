@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 23,
+  "fontFamily": "Inter",
+  "exportSettings": {
+    "layoutMode": "flow",
+    "minifyHtml": false,
+    "strictCsp": true,
+    "includeInspectorMetadata": false,
+    "darkMode": {
+      "enabled": false,
+      "palette": {}
+    },
+    "pwa": {
+      "enabled": false,
+      "iconAssetId": null
+    },
+    "defaultFaviconAssetId": null
+  },
+  "frames": [
+    {
+      "id": "frame-fixture-v23-export-layout",
+      "name": "Fixture Export Layout",
+      "filename": "export-layout.html",
+      "x": 0,
+      "y": 0,
+      "width": 760,
+      "height": 520,
+      "background": "#f8fafc",
+      "exportLayoutMode": "absolute",
+      "exportSettings": {
+        "layoutMode": "inherit",
+        "minifyHtml": true
+      },
+      "elements": [
+        {
+          "id": "hero-v23-export-layout",
+          "type": "section",
+          "x": 40,
+          "y": 48,
+          "width": 360,
+          "height": 160,
+          "content": "Pinned hero",
+          "color": "#f8fafc",
+          "background": "#111827",
+          "borderRadius": 28,
+          "fontSize": 40,
+          "fontWeight": "800",
+          "targetFrameId": null,
+          "exportPinned": true,
+          "semanticTag": "main"
+        },
+        {
+          "id": "flow-v23-export-layout",
+          "type": "text",
+          "x": 48,
+          "y": 240,
+          "width": 420,
+          "height": 60,
+          "content": "Flow section copy",
+          "color": "#111827",
+          "background": "transparent",
+          "borderRadius": 0,
+          "fontSize": 24,
+          "fontWeight": "500",
+          "targetFrameId": null,
+          "exportPinned": false,
+          "semanticTag": "section"
+        }
+      ]
+    }
+  ],
+  "orphanElements": [
+    {
+      "id": "orphan-v23-export-layout",
+      "type": "section",
+      "filename": "aside.html",
+      "x": 820,
+      "y": 40,
+      "width": 240,
+      "height": 180,
+      "content": "Standalone aside",
+      "color": "#111827",
+      "background": "#e0f2fe",
+      "borderRadius": 18,
+      "fontSize": 20,
+      "fontWeight": "700",
+      "targetFrameId": null,
+      "exportPinned": true,
+      "semanticTag": "aside"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 14,
+  "fontFamily": "Inter",
+  "exportSettings": {
+    "layoutMode": "flow",
+    "minifyHtml": true,
+    "strictCsp": true,
+    "includeInspectorMetadata": false,
+    "darkMode": {
+      "enabled": true,
+      "palette": {
+        "accent": "#14b8a6"
+      }
+    },
+    "pwa": {
+      "enabled": true,
+      "appName": "Export Fixture",
+      "iconAssetId": "asset-export-icon"
+    },
+    "defaultFaviconAssetId": "asset-export-favicon"
+  },
+  "frames": [
+    {
+      "id": "frame-fixture-v14",
+      "name": "Fixture Export Settings",
+      "filename": "export-settings.html",
+      "x": 0,
+      "y": 0,
+      "width": 720,
+      "height": 480,
+      "background": "#ffffff",
+      "exportSettings": {
+        "minifyHtml": false,
+        "darkModeEnabled": false
+      },
+      "elements": [
+        {
+          "id": "copy-v14",
+          "type": "text",
+          "x": 48,
+          "y": 64,
+          "width": 320,
+          "height": 64,
+          "content": "Export fixture",
+          "color": "#0f172a",
+          "background": "transparent",
+          "borderRadius": 0,
+          "fontSize": 32,
+          "fontWeight": "700",
+          "targetFrameId": null
+        }
+      ]
+    }
+  ],
+  "orphanElements": []
+}

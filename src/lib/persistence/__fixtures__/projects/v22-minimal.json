@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 22,
+  "fontFamily": "Space Grotesk",
+  "textStylePresets": [
+    {
+      "id": "heading1",
+      "label": "Fixture Hero",
+      "fontSize": 48,
+      "fontWeight": "800",
+      "letterSpacing": -0.02,
+      "lineHeight": 1.05
+    }
+  ],
+  "appearancePresets": [
+    {
+      "id": "appearance-fixture",
+      "label": "Fixture Glass Card",
+      "description": "Fixture-only custom appearance preset",
+      "fields": {
+        "background": "#101827",
+        "color": "#f8fafc",
+        "borderRadius": 24
+      },
+      "createdAt": 1710000000000,
+      "updatedAt": 1710000000000
+    }
+  ],
+  "projectStyles": [
+    {
+      "id": "style-fixture-accent",
+      "name": "Fixture Accent",
+      "kind": "color",
+      "fields": {
+        "color": "#f97316"
+      },
+      "createdAt": 1710000000000,
+      "updatedAt": 1710000000000
+    }
+  ],
+  "variableCollections": [
+    {
+      "id": "vars-fixture",
+      "name": "Fixture Tokens",
+      "activeModeId": "mode-light",
+      "modes": [
+        { "id": "mode-light", "name": "Light" },
+        { "id": "mode-dark", "name": "Dark" }
+      ],
+      "groups": [
+        { "id": "group-color", "name": "Color" }
+      ],
+      "variables": [
+        {
+          "id": "var-fixture-accent",
+          "name": "Fixture Accent",
+          "path": "color.fixture.accent",
+          "type": "color",
+          "groupId": "group-color",
+          "fallback": "#f97316",
+          "valuesByMode": {
+            "mode-light": "#f97316",
+            "mode-dark": "#fb923c"
+          },
+          "createdAt": 1710000000000,
+          "updatedAt": 1710000000000
+        }
+      ],
+      "createdAt": 1710000000000,
+      "updatedAt": 1710000000000
+    }
+  ],
+  "exportSettings": {
+    "minifyHtml": true,
+    "strictCsp": true,
+    "includeInspectorMetadata": true,
+    "darkMode": {
+      "enabled": true,
+      "palette": {
+        "background": "#020617",
+        "text": "#f8fafc"
+      }
+    },
+    "pwa": {
+      "enabled": true,
+      "appName": "Fixture App",
+      "iconAssetId": "asset-icon"
+    },
+    "defaultFaviconAssetId": "asset-favicon"
+  },
+  "comments": [
+    {
+      "id": "comment-thread-fixture",
+      "projectId": "fixture-project",
+      "target": {
+        "type": "frame",
+        "frameId": "frame-fixture-v22",
+        "x": 24,
+        "y": 32
+      },
+      "body": "Check fixture migration",
+      "messages": [
+        {
+          "id": "comment-message-fixture",
+          "authorName": "Fixture Reviewer",
+          "body": "Check fixture migration",
+          "createdAt": 1710000000000
+        }
+      ],
+      "resolved": false,
+      "status": "local",
+      "createdAt": 1710000000000,
+      "updatedAt": 1710000000000
+    }
+  ],
+  "reviewOverlays": [
+    {
+      "id": "overlay-fixture",
+      "kind": "measurement",
+      "x1": 0,
+      "y1": 0,
+      "x2": 640,
+      "y2": 0,
+      "label": "Fixture width",
+      "createdAt": 1710000000000
+    }
+  ],
+  "guides": [
+    {
+      "id": "guide-fixture",
+      "axis": "x",
+      "position": 80,
+      "scope": "frame",
+      "frameId": "frame-fixture-v22",
+      "createdAt": 1710000000000
+    }
+  ],
+  "componentMasters": [
+    {
+      "id": "component-fixture",
+      "name": "Fixture CTA",
+      "description": "Fixture component master",
+      "root": {
+        "id": "component-root-fixture",
+        "type": "section",
+        "x": 0,
+        "y": 0,
+        "width": 160,
+        "height": 48,
+        "content": "Fixture CTA",
+        "color": "#111827",
+        "background": "#f97316",
+        "borderRadius": 999,
+        "fontSize": 16,
+        "fontWeight": "700",
+        "targetFrameId": null,
+        "isButton": true
+      },
+      "variants": [],
+      "properties": [],
+      "createdAt": 1710000000000,
+      "updatedAt": 1710000000000,
+      "thumbnailAssetId": null
+    }
+  ],
+  "snippets": [
+    {
+      "id": "snippet-fixture",
+      "name": "Fixture Hero Copy",
+      "description": "Fixture reusable text snippet",
+      "roots": [
+        {
+          "id": "snippet-text-fixture",
+          "type": "text",
+          "x": 0,
+          "y": 0,
+          "width": 220,
+          "height": 56,
+          "content": "Fixture hero copy",
+          "color": "#f8fafc",
+          "background": "transparent",
+          "borderRadius": 0,
+          "fontSize": 32,
+          "fontWeight": "800",
+          "targetFrameId": null
+        }
+      ],
+      "createdAt": 1710000000000,
+      "updatedAt": 1710000000000,
+      "thumbnailAssetId": null
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-fixture-v22",
+      "name": "Fixture Home",
+      "filename": "index.html",
+      "x": 0,
+      "y": 0,
+      "width": 640,
+      "height": 480,
+      "background": "#0f172a",
+      "exportLayoutMode": "inherit",
+      "elements": [
+        {
+          "id": "hero-fixture",
+          "type": "section",
+          "x": 48,
+          "y": 56,
+          "width": 320,
+          "height": 160,
+          "content": "Fixture Hero",
+          "color": "#f8fafc",
+          "background": "#111827",
+          "borderRadius": 32,
+          "fontSize": 48,
+          "fontWeight": "800",
+          "targetFrameId": null,
+          "exportPinned": true,
+          "semanticTag": "header"
+        }
+      ]
+    }
+  ],
+  "orphanElements": []
+}

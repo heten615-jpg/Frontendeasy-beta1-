@@ -1,0 +1,600 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HTML generation snapshots > captures frame layout, metadata, links, and escaped content 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="generator" content="Frontendeasy" />
+  <meta name="description" content="Plan &lt;strong&gt; &amp; ship &quot;safely&quot;" />
+  <meta property="og:title" content="Share &lt;Launch&gt; &amp; Learn" />
+  <meta property="og:description" content="Plan &lt;strong&gt; &amp; ship &quot;safely&quot;" />
+  <meta property="og:image" content="https://example.test/image.png?size=large&amp;mode=dark" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="keywords" content="studio, &lt;design&gt;, ship &amp; learn" />
+  <meta name="theme-color" content="#101010" />
+  <title>Launch &lt;Page&gt; &amp; &quot;Proof&quot;</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;display=swap" />
+  <style>
+    :root { --frontendeasy-font: 'Lora', system-ui, sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(90deg, #101010, #202020);
+      font-family: var(--frontendeasy-font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #__frontendeasy_canvas {
+      position: relative;
+      width: 1200px;
+      height: 800px;
+      overflow: hidden;
+      transform-origin: top center;
+    }
+    #__frontendeasy_canvas a:hover { opacity: 0.85; transform: translateY(-1px); }
+    #__frontendeasy_canvas a:active { opacity: 0.7; transform: translateY(0); }
+    #__frontendeasy_canvas a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
+    .el-headline{position:absolute;left:48px;top:64px;width:520px;height:100px;background:transparent;color:#f5f5f5;border-radius:0px;font-size:40px;font-weight:700;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.15;overflow:hidden;text-shadow:0px 2px 8px rgba(0, 0, 0, 0.4);margin:0;text-align:left;align-items:flex-start;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:break-word;white-space:pre-wrap}
+    .el-cta{position:absolute;left:48px;top:204px;width:240px;height:56px;background:linear-gradient(90deg, #ffc44d, #ff9d3d);color:#101010;border-radius:12px;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;text-decoration:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <main id="__frontendeasy_canvas">
+    <h1 class="el-headline" data-name="Headline &quot;Primary&quot;">Build &lt;fast&gt; &amp; &quot;clearly&quot;</h1>
+    <a class="el-cta" href="details-and-specs.html" data-name="CTA &lt;next&gt;">Read &amp; compare &lt;now&gt;</a>
+  </main>
+  <script>
+    (function () {
+      var W = 1200, H = 800;
+      var canvas = document.getElementById('__frontendeasy_canvas');
+      function fit() {
+        var vw = window.innerWidth;
+        var s = vw < W ? vw / W : 1;
+        if (s < 1) {
+          canvas.style.transform = 'scale(' + s + ')';
+          // Negative margin collapses the unused layout space the scaled canvas leaves below itself
+          canvas.style.marginBottom = Math.ceil((s - 1) * H) + 'px';
+        } else {
+          canvas.style.transform = '';
+          canvas.style.marginBottom = '';
+        }
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+</html>"
+`;
+
+exports[`HTML generation snapshots > captures loose-element layout, link output, and sanitized CSS 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Frontendeasy (loose element)" />
+  <title>Loose &lt;CTA&gt; &amp; &quot;go&quot;</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;display=swap" />
+  <style>
+    :root { --frontendeasy-font: 'Lora', system-ui, sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: transparent;
+      font-family: var(--frontendeasy-font);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #__frontendeasy_canvas {
+      position: relative;
+      width: 280px;
+      height: 64px;
+    }
+    #__frontendeasy_canvas a:hover { opacity: 0.85; transform: translateY(-1px); }
+    #__frontendeasy_canvas a:active { opacity: 0.7; transform: translateY(0); }
+    .el-loose-link{position:absolute;left:0px;top:0px;width:280px;height:64px;background:#141414;color:#ffffff;border-radius:18px;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;box-sizing:border-box;border:1px solid rgba(255, 255, 255, 0.3);padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;text-decoration:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <main id="__frontendeasy_canvas">
+    <a class="el-loose-link" href="details-and-specs.html" data-name="Loose &lt;CTA&gt; &amp; &quot;go&quot;">Open &lt;details&gt; &amp; continue</a>
+  </main>
+</body>
+</html>"
+`;
+
+exports[`HTML generation snapshots > captures masks, fills, effects, typography, media fill, and grid layout together 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="generator" content="Frontendeasy" />
+  <meta name="description" content="Advanced Export" />
+  <title>Advanced Export</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" />
+  <style>
+    :root { --frontendeasy-font: 'Space Grotesk', system-ui, sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f172a;
+      font-family: var(--frontendeasy-font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #__frontendeasy_canvas {
+      position: relative;
+      width: 960px;
+      height: 640px;
+      overflow: hidden;
+      transform-origin: top center;
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(240px, 320px);
+      grid-template-rows:auto auto;
+      column-gap:24px;
+      row-gap:18px;
+      padding:40px 48px 40px 48px;
+      align-items:stretch;
+      justify-content:flex-start;
+    }
+    #__frontendeasy_canvas a:hover { opacity: 0.85; transform: translateY(-1px); }
+    #__frontendeasy_canvas a:active { opacity: 0.7; transform: translateY(0); }
+    #__frontendeasy_canvas a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
+    .el-advanced-background{position:absolute;left:0px;top:0px;width:960px;height:640px;background:linear-gradient(135deg, #0f172a, #111827);color:#ffffff;border-radius:0px;font-size:16px;font-weight:400;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+    .el-advanced-type{position:relative;width:420px;justify-self:stretch;flex-basis:0;height:auto;min-width:280px;background:transparent;color:#f8fafc;border-radius:0px;font-size:42px;font-weight:800;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.05;overflow:hidden;letter-spacing:-0.02em;text-align:right;align-items:flex-end;justify-content:flex-end;font-variant-caps:small-caps;hanging-punctuation:first last;font-feature-settings:'liga' 1, 'ss01' 1;text-indent:12px;margin-block-end:10px;margin:0;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:break-word;white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .el-advanced-masked-fill{position:relative;width:300px;justify-self:stretch;flex-basis:0;min-width:240px;background:repeating-radial-gradient(circle at 0 0, rgba(255,255,255,0.14) 0 1px, transparent 1px 3px),repeating-linear-gradient(0deg, transparent 0 12px, rgba(255,255,255,0.18) 12px 13px),radial-gradient(circle at 30% 20%, #ff6b39 0%, #111827 70%);color:#ffffff;border-radius:28px;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;box-sizing:border-box;box-shadow:0px 10px 30px -8px rgba(0,0,0,0.45),inset 0px 1px 10px 0px rgba(255,255,255,0.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.22);--frontendeasy-mask-kind:alpha;mask-mode:alpha;--frontendeasy-mask-inverted:1;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+    .el-advanced-media-fill{position:relative;width:300px;justify-self:stretch;flex-basis:0;min-height:160px;background:#0f172a;background-image:url("data:image/png;base64,advanced");background-size:contain;background-position:65% 35%;background-repeat:no-repeat;color:#ffffff;border-radius:24px;font-size:16px;font-weight:400;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+    .el-advanced-layout-group{position:relative;width:360px;justify-self:stretch;flex-basis:0;height:auto;min-height:160px;background:rgba(15,23,42,0.72);border-radius:22px;box-sizing:border-box;display:flex;flex-direction:row;gap:12px;padding:18px 18px 18px 18px;align-items:stretch;justify-content:space-between;flex-wrap:wrap}
+.el-advanced-layout-copy{position:relative;width:160px;flex-grow:1;flex-basis:0;height:auto;min-width:140px;background:transparent;color:#f8fafc;border-radius:0px;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;margin:0;text-align:left;align-items:flex-start;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:break-word;white-space:pre-wrap}
+.el-advanced-layout-chip{position:relative;width:120px;width:max-content;min-width:96px;background:#ffb26b;color:#140b08;border-radius:999px;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+  </style>
+</head>
+<body>
+  <main id="__frontendeasy_canvas">
+    <section class="el-advanced-background"></section>
+    <h1 class="el-advanced-type" data-name="Advanced type">Launch faster with precise visual exports</h1>
+    <section class="el-advanced-masked-fill" data-name="Masked fill card">Masked fill</section>
+    <section class="el-advanced-media-fill" data-name="Media fill tile"></section>
+    <section class="el-advanced-layout-group" data-name="Layout group">
+      <h2 class="el-advanced-layout-copy">Flexible child</h2>
+      <section class="el-advanced-layout-chip">Hug</section>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var W = 960, H = 640;
+      var canvas = document.getElementById('__frontendeasy_canvas');
+      function fit() {
+        var vw = window.innerWidth;
+        var s = vw < W ? vw / W : 1;
+        if (s < 1) {
+          canvas.style.transform = 'scale(' + s + ')';
+          // Negative margin collapses the unused layout space the scaled canvas leaves below itself
+          canvas.style.marginBottom = Math.ceil((s - 1) * H) + 'px';
+        } else {
+          canvas.style.transform = '';
+          canvas.style.marginBottom = '';
+        }
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+</html>"
+`;
+
+exports[`generateFrameHTML: golden landing export snapshot > matches the current absolute-export baseline and quality counters 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <meta name="generator" content="Frontendeasy" />
+  <meta name="description" content="Golden Landing" />
+  <title>Golden Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" />
+  <style>
+    :root { --frontendeasy-font: 'Inter', system-ui, sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #fff8ed;
+      font-family: var(--frontendeasy-font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #__frontendeasy_canvas {
+      position: relative;
+      width: 1440px;
+      height: 980px;
+      overflow: hidden;
+      transform-origin: top center;
+    }
+    #__frontendeasy_canvas a:hover { opacity: 0.85; transform: translateY(-1px); }
+    #__frontendeasy_canvas a:active { opacity: 0.7; transform: translateY(0); }
+    #__frontendeasy_canvas a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
+    .el-hero-bg{position:absolute;left:0px;top:0px;width:1440px;height:420px;background:linear-gradient(135deg, #0a0a0f 0%, #201008 100%);color:#111111;border-radius:0px;font-size:16px;font-weight:400;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+    .el-hero-group{position:absolute;left:96px;top:88px;width:760px;height:260px;background:transparent;border-radius:0px;box-sizing:border-box;display:flex;flex-direction:column;gap:18px;padding:0px 0px 0px 0px;align-items:flex-start;justify-content:flex-start}
+.el-hero-title{position:relative;width:720px;height:96px;background:transparent;color:#fff8ed;border-radius:0px;font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;margin:0;text-align:left;align-items:flex-start;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:break-word;white-space:pre-wrap}
+.el-hero-subtitle{position:relative;width:640px;height:56px;background:transparent;color:#d9cfc3;border-radius:0px;font-size:22px;font-weight:500;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;margin:0;text-align:left;align-items:flex-start;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:break-word;white-space:pre-wrap}
+.el-hero-cta{position:relative;width:190px;height:54px;background:#ff6b39;color:#0a0a0f;border-radius:999px;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;text-decoration:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;white-space:nowrap}
+    .el-free-section-a{position:absolute;left:96px;top:500px;width:540px;height:180px;background:#ffffff;color:#0a0a0f;border-radius:28px;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+    .el-free-section-b{position:absolute;left:708px;top:500px;width:540px;height:180px;background:#fff1df;color:#0a0a0f;border-radius:28px;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden}
+    .el-golden-image{position:absolute;left:96px;top:720px;width:280px;height:160px;border-radius:0px;object-fit:cover;object-position:50% 50%;display:block;box-sizing:border-box}
+    .el-golden-list{position:absolute;left:430px;top:728px;width:360px;height:132px;background:transparent;color:#3d332c;border-radius:0px;font-size:20px;font-weight:500;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;display:block;padding:8px 12px 8px 32px;line-height:1.5;overflow:visible}
+    .el-footer-group{position:absolute;left:96px;top:900px;width:1152px;height:48px;background:transparent;border-radius:0px;box-sizing:border-box;display:flex;flex-direction:row;gap:24px;padding:0px 0px 0px 0px;align-items:center;justify-content:space-between}
+.el-footer-copy{position:relative;width:320px;height:32px;background:transparent;color:#5d5148;border-radius:0px;font-size:16px;font-weight:400;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;margin:0;text-align:left;align-items:flex-start;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:break-word;white-space:pre-wrap}
+.el-footer-link{position:relative;width:160px;height:44px;background:#0a0a0f;color:#fff8ed;border-radius:999px;font-size:16px;font-weight:400;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:12px 16px;font-family:var(--frontendeasy-font);line-height:1.35;overflow:hidden;text-decoration:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <main id="__frontendeasy_canvas">
+    <section class="el-hero-bg"></section>
+    <header class="el-hero-group">
+      <h1 class="el-hero-title">Export a real landing page</h1>
+      <h2 class="el-hero-subtitle">Clean standalone HTML from a visual canvas.</h2>
+      <a class="el-hero-cta" href="golden.html">Start now</a>
+    </header>
+    <section class="el-free-section-a">Fast visual editing</section>
+    <section class="el-free-section-b">Portable output</section>
+    <img class="el-golden-image" alt="" src="" />
+    <ul class="el-golden-list">
+      <li>Semantic tags</li>
+      <li>Responsive variants</li>
+      <li>Local-first backups</li>
+    </ul>
+    <footer class="el-footer-group">
+      <p class="el-footer-copy">© Frontendeasy</p>
+      <a class="el-footer-link" href="golden.html">Contact</a>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var W = 1440, H = 980;
+      var canvas = document.getElementById('__frontendeasy_canvas');
+      function fit() {
+        var vw = window.innerWidth;
+        var s = vw < W ? vw / W : 1;
+        if (s < 1) {
+          canvas.style.transform = 'scale(' + s + ')';
+          // Negative margin collapses the unused layout space the scaled canvas leaves below itself
+          canvas.style.marginBottom = Math.ceil((s - 1) * H) + 'px';
+        } else {
+          canvas.style.transform = '';
+          canvas.style.marginBottom = '';
+        }
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+</html>"
+`;
+
+exports[`migrateState: v4 snapshot > produces stable output shape for a known v4 blob 1`] = `
+{
+  "activeFrameId": "snap-frame",
+  "appearancePresets": [
+    {
+      "createdAt": 0,
+      "description": "Muted surface with radius, border, and soft shadow",
+      "fields": {
+        "background": "rgba(255,255,255,0.06)",
+        "border": {
+          "color": "rgba(255,255,255,0.12)",
+          "style": "solid",
+          "width": 1,
+        },
+        "borderRadius": 18,
+        "color": "#f7f1e8",
+        "shadow": {
+          "blur": 32,
+          "color": "rgba(0,0,0,0.28)",
+          "spread": 0,
+          "x": 0,
+          "y": 12,
+        },
+      },
+      "id": "card",
+      "label": "Card",
+      "updatedAt": 0,
+    },
+    {
+      "createdAt": 0,
+      "description": "Warm call-to-action treatment",
+      "fields": {
+        "background": "linear-gradient(90deg, #ffc44d, #ff6b39)",
+        "border": null,
+        "borderRadius": 999,
+        "color": "#140b08",
+        "shadow": {
+          "blur": 24,
+          "color": "rgba(255,107,57,0.24)",
+          "spread": 0,
+          "x": 0,
+          "y": 10,
+        },
+      },
+      "id": "cta",
+      "label": "CTA button",
+      "updatedAt": 0,
+    },
+    {
+      "createdAt": 0,
+      "description": "Transparent fill with a quiet stroke",
+      "fields": {
+        "background": "transparent",
+        "border": {
+          "color": "rgba(255,255,255,0.18)",
+          "style": "solid",
+          "width": 1,
+        },
+        "borderRadius": 12,
+        "shadow": null,
+      },
+      "id": "subtle-border",
+      "label": "Subtle border",
+      "updatedAt": 0,
+    },
+  ],
+  "comments": [],
+  "componentMasters": [],
+  "exportSettings": {
+    "darkMode": {
+      "enabled": false,
+      "palette": {},
+    },
+    "defaultFaviconAssetId": null,
+    "includeInspectorMetadata": false,
+    "layoutMode": "flow",
+    "minifyHtml": false,
+    "pwa": {
+      "appName": undefined,
+      "enabled": false,
+      "iconAssetId": null,
+    },
+    "strictCsp": false,
+  },
+  "frames": [
+    {
+      "background": "#111113",
+      "elements": [
+        {
+          "background": "transparent",
+          "borderRadius": 0,
+          "color": "#ffffff",
+          "content": "Hello",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "height": 40,
+          "id": "snap-el",
+          "targetFrameId": null,
+          "type": "text",
+          "width": 300,
+          "x": 100,
+          "y": 100,
+        },
+      ],
+      "exportLayoutMode": undefined,
+      "filename": "index.html",
+      "height": 900,
+      "id": "snap-frame",
+      "name": "Home",
+      "width": 1440,
+      "x": 0,
+      "y": 0,
+    },
+  ],
+  "guides": [],
+  "orphanElements": [],
+  "projectStyles": [
+    {
+      "createdAt": 0,
+      "fields": {
+        "effects": undefined,
+        "layoutGuide": undefined,
+        "text": {
+          "fontSize": 56,
+          "fontWeight": "800",
+          "letterSpacing": -0.03,
+          "lineHeight": 1.05,
+        },
+      },
+      "id": "style-text-display",
+      "kind": "text",
+      "name": "Display text",
+      "updatedAt": 0,
+    },
+    {
+      "createdAt": 0,
+      "fields": {
+        "color": "#ff6b39",
+        "effects": undefined,
+        "layoutGuide": undefined,
+        "text": undefined,
+        "variableId": "var-color-brand",
+      },
+      "id": "style-color-brand",
+      "kind": "color",
+      "name": "Brand orange",
+      "updatedAt": 0,
+    },
+    {
+      "createdAt": 0,
+      "fields": {
+        "effects": [
+          {
+            "id": "style-effect-soft-shadow-drop",
+            "kind": "drop-shadow",
+            "settings": {
+              "shadow": {
+                "blur": 34,
+                "color": "rgba(0,0,0,0.28)",
+                "spread": 0,
+                "x": 0,
+                "y": 14,
+              },
+            },
+            "visible": true,
+          },
+        ],
+        "layoutGuide": undefined,
+        "text": undefined,
+      },
+      "id": "style-effect-soft-shadow",
+      "kind": "effect",
+      "name": "Soft shadow",
+      "updatedAt": 0,
+    },
+    {
+      "createdAt": 0,
+      "fields": {
+        "effects": undefined,
+        "layoutGuide": {
+          "color": "rgba(255,107,57,0.22)",
+          "kind": "uniform",
+          "size": 8,
+          "variableRef": "layout.grid.8",
+          "visible": true,
+        },
+        "text": undefined,
+        "variableId": "var-layout-grid-8",
+      },
+      "id": "style-layout-8pt-grid",
+      "kind": "layout-guide",
+      "name": "8pt layout grid",
+      "updatedAt": 0,
+    },
+  ],
+  "reviewOverlays": [],
+  "schemaVersion": 23,
+  "selectedElementId": null,
+  "selectedElementIds": [],
+  "selectedFrameIds": [
+    "snap-frame",
+  ],
+  "snippets": [],
+  "textStylePresets": [
+    {
+      "fontSize": 56,
+      "fontWeight": "800",
+      "id": "heading1",
+      "label": "Heading 1",
+      "letterSpacing": -0.03,
+      "lineHeight": 1.05,
+      "textDecoration": undefined,
+      "textTransform": undefined,
+    },
+    {
+      "fontSize": 36,
+      "fontWeight": "700",
+      "id": "heading2",
+      "label": "Heading 2",
+      "letterSpacing": -0.02,
+      "lineHeight": 1.12,
+      "textDecoration": undefined,
+      "textTransform": undefined,
+    },
+    {
+      "fontSize": 16,
+      "fontWeight": "400",
+      "id": "body",
+      "label": "Body",
+      "letterSpacing": 0,
+      "lineHeight": 1.5,
+      "textDecoration": undefined,
+      "textTransform": undefined,
+    },
+    {
+      "fontSize": 12,
+      "fontWeight": "500",
+      "id": "caption",
+      "label": "Caption",
+      "letterSpacing": 0.04,
+      "lineHeight": 1.35,
+      "textDecoration": undefined,
+      "textTransform": undefined,
+    },
+  ],
+  "variableCollections": [
+    {
+      "activeModeId": "light",
+      "createdAt": 0,
+      "groups": [
+        {
+          "id": "colors",
+          "name": "Colors",
+        },
+        {
+          "id": "layout",
+          "name": "Layout",
+        },
+      ],
+      "id": "collection-local",
+      "modes": [
+        {
+          "id": "light",
+          "name": "Light",
+        },
+        {
+          "id": "dark",
+          "name": "Dark",
+        },
+      ],
+      "name": "Local variables",
+      "updatedAt": 0,
+      "variables": [
+        {
+          "createdAt": 0,
+          "fallback": "#ff6b39",
+          "groupId": "colors",
+          "id": "var-color-brand",
+          "name": "Brand orange",
+          "path": "color.brand.orange",
+          "type": "color",
+          "updatedAt": 0,
+          "valuesByMode": {
+            "dark": "#ff8a5f",
+            "light": "#ff6b39",
+          },
+        },
+        {
+          "createdAt": 0,
+          "fallback": "8",
+          "groupId": "layout",
+          "id": "var-layout-grid-8",
+          "name": "8pt grid",
+          "path": "layout.grid.8",
+          "type": "layout",
+          "updatedAt": 0,
+          "valuesByMode": {
+            "dark": "8",
+            "light": "8",
+          },
+        },
+      ],
+    },
+  ],
+}
+`;

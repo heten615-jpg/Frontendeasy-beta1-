@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 21,
+  "fontFamily": "Lora",
+  "projectStyles": [
+    {
+      "id": "style-v21-heading",
+      "name": "Fixture Heading",
+      "kind": "text",
+      "fields": {
+        "text": {
+          "fontSize": 64,
+          "fontWeight": "800",
+          "lineHeight": 1.05,
+          "letterSpacing": -0.04
+        }
+      },
+      "createdAt": 1710002000000,
+      "updatedAt": 1710002000000
+    }
+  ],
+  "variableCollections": [
+    {
+      "id": "vars-v21-brand",
+      "name": "Fixture Brand Variables",
+      "activeModeId": "light",
+      "modes": [
+        { "id": "light", "name": "Light" },
+        { "id": "dark", "name": "Dark" }
+      ],
+      "groups": [
+        { "id": "layout", "name": "Layout" }
+      ],
+      "variables": [
+        {
+          "id": "var-v21-spacing",
+          "name": "Fixture Spacing",
+          "path": "spacing.fixture",
+          "type": "layout",
+          "groupId": "layout",
+          "fallback": "24",
+          "valuesByMode": {
+            "light": "24",
+            "dark": "28"
+          },
+          "createdAt": 1710002000000,
+          "updatedAt": 1710002000000
+        }
+      ],
+      "createdAt": 1710002000000,
+      "updatedAt": 1710002000000
+    }
+  ],
+  "componentMasters": [
+    {
+      "id": "component-v21-card",
+      "name": "Fixture Card",
+      "root": {
+        "id": "component-v21-card-root",
+        "type": "section",
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 140,
+        "content": "Fixture Card",
+        "color": "#111827",
+        "background": "#ffffff",
+        "borderRadius": 20,
+        "fontSize": 18,
+        "fontWeight": "700",
+        "targetFrameId": null
+      },
+      "variants": [],
+      "properties": [],
+      "createdAt": 1710002000000,
+      "updatedAt": 1710002000000,
+      "thumbnailAssetId": null
+    }
+  ],
+  "snippets": [
+    {
+      "id": "snippet-v21-card-copy",
+      "name": "Fixture Card Copy",
+      "roots": [
+        {
+          "id": "snippet-v21-copy-root",
+          "type": "text",
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 44,
+          "content": "Reusable v21 copy",
+          "color": "#111827",
+          "background": "transparent",
+          "borderRadius": 0,
+          "fontSize": 20,
+          "fontWeight": "600",
+          "targetFrameId": null
+        }
+      ],
+      "createdAt": 1710002000000,
+      "updatedAt": 1710002000000,
+      "thumbnailAssetId": null
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-fixture-v21",
+      "name": "Fixture Styles Variables",
+      "filename": "styles-variables.html",
+      "x": 0,
+      "y": 0,
+      "width": 680,
+      "height": 460,
+      "background": "#111827",
+      "elements": [
+        {
+          "id": "image-v21-asset",
+          "type": "image",
+          "x": 32,
+          "y": 40,
+          "width": 260,
+          "height": 180,
+          "content": "",
+          "color": "#ffffff",
+          "background": "transparent",
+          "borderRadius": 16,
+          "fontSize": 16,
+          "fontWeight": "400",
+          "targetFrameId": null,
+          "imageAssetId": "asset-v21-image",
+          "imageAssetPath": "fixture/project/asset-v21-image.png",
+          "imageMime": "image/png",
+          "alt": "Fixture asset image"
+        }
+      ]
+    }
+  ],
+  "orphanElements": []
+}
