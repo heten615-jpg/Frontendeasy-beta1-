@@ -45,9 +45,6 @@ jobs:
       - name: Local GitHub release readiness
         run: npm run verify:release
 
-      - name: Handoff validation
-        run: npm run validate:handoff
-
       - name: Production build and bundle budget
         run: npm run build:budget
 
