@@ -17,14 +17,5 @@ playwright-report/
 test-results/
 
 # Agent/private working context — keep local, never publish
+*.md
 AGENT_AUTONOMY/
-CLAUDE.md
-AGENTS.md
-TASKS.md
-TASK_QUEUE.md
-STATE.md
-RUNBOOK.md
-CHECKLIST.md
-*handoff*.md
-*Handoff*.md
-фикс багов.md

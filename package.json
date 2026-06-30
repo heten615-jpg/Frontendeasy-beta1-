@@ -11,8 +11,6 @@
     "analyze:bundle": "npm run build && node scripts/analyze-bundle.mjs",
     "analyze:bundle:dist": "node scripts/analyze-bundle.mjs",
     "generate:large-project": "node scripts/generate-large-project.mjs",
-    "generate:release-notes": "node scripts/generate-release-notes.mjs",
-    "generate:changelog": "node scripts/generate-release-notes.mjs",
     "lint:export": "node scripts/check-export-quality.mjs",
     "verify:release": "node scripts/check-release-readiness.mjs",
     "lint:types": "tsc -p tsconfig.app.json --noUnusedLocals --noUnusedParameters --noEmit && tsc -p tsconfig.node.json && node scripts/check-dead-exports.mjs",

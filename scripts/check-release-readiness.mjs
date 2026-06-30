@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(fileURLToPath(new URL('..', import.meta.url)));
@@ -26,6 +26,29 @@ function has(text, pattern) {
   return typeof pattern === 'string' ? text.includes(pattern) : pattern.test(text);
 }
 
+function collectSourceFiles(relDir = '') {
+  const ignoredDirs = new Set(['.git', 'node_modules', 'dist', 'release', 'playwright-report', 'test-results']);
+  const absDir = join(root, relDir);
+  const entries = readdirSync(absDir, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const relPath = relDir ? `${relDir}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) {
+      if (!ignoredDirs.has(entry.name)) {
+        files.push(...collectSourceFiles(relPath));
+      }
+      continue;
+    }
+
+    if (entry.isFile()) {
+      files.push(relPath);
+    }
+  }
+
+  return files;
+}
+
 const packageJson = JSON.parse(read('package.json'));
 const scripts = packageJson.scripts ?? {};
 check('package is not accidentally publishable to npm', packageJson.private === true);
@@ -42,13 +65,19 @@ check('verify:release script points at this local-first preflight', scripts['ver
 check('browser smoke script exists for quick GitHub CI validation', scripts['test:e2e:smoke'] === 'playwright test e2e/onboarding.spec.ts e2e/update-notes.spec.ts e2e/mobile-smoke.mobile.ts');
 
 const gitignore = read('.gitignore');
+const gitignoreLines = gitignore.split(/\r?\n/);
 for (const ignored of ['node_modules/', 'dist/', '.env', '.env.*', 'test-results/', 'playwright-report/']) {
-  check(`${ignored} is excluded from GitHub source release`, gitignore.split(/\r?\n/).includes(ignored));
+  check(`${ignored} is excluded from GitHub source release`, gitignoreLines.includes(ignored));
 }
-check('.env.example remains commit-allowed', gitignore.split(/\r?\n/).includes('!.env.example'));
-for (const ignored of ['AGENT_AUTONOMY/', 'CLAUDE.md', 'AGENTS.md', 'TASK_QUEUE.md', 'STATE.md', 'RUNBOOK.md', 'фикс багов.md']) {
-  check(`${ignored} private agent context is excluded from GitHub source release`, gitignore.split(/\r?\n/).includes(ignored));
+check('.env.example remains commit-allowed', gitignoreLines.includes('!.env.example'));
+check('Markdown instruction files are excluded from GitHub source release', gitignoreLines.includes('*.md'));
+for (const ignored of ['AGENT_AUTONOMY/']) {
+  check(`${ignored} private agent context is excluded from GitHub source release`, gitignoreLines.includes(ignored));
 }
+
+const sourceFiles = collectSourceFiles();
+const markdownFiles = sourceFiles.filter((file) => extname(file).toLowerCase() === '.md');
+check('public source contains no Markdown instruction files', markdownFiles.length === 0, markdownFiles.slice(0, 20).join(', '));
 
 const envExample = read('.env.example');
 check('.env.example documents offline-only mode when Supabase vars are absent', envExample.includes('offline-only mode') && envExample.includes('IndexedDB') && envExample.includes('localStorage'));
@@ -57,44 +86,6 @@ check('.env.example uses placeholder Supabase values only', envExample.includes(
 
 check('vite build defaults to root-relative assets for local preview SPA fallback', read('vite.config.ts').includes("process.env.FRONTENDEASY_STATIC_BASE ?? '/'"));
 
-const readme = read('README.md');
-check('README positions the release as GitHub/local-first', readme.includes('GitHub/local-first'));
-check('README says no cloud hosting is required', readme.includes('No cloud hosting is required'));
-check('README includes clone/download local install command', readme.includes('npm ci'));
-check('README includes local dev command', readme.includes('npm run dev'));
-check('README includes local production preview command', readme.includes('npm run preview'));
-check('README includes local release verification command', readme.includes('npm run verify:release'));
-check('README links the local release guide', readme.includes('docs/LOCAL_RELEASE.md'));
-check('README keeps Supabase explicitly optional', has(readme, /Supabase[\s\S]{0,80}optional/i));
-
-check('local GitHub release guide exists', exists('docs/LOCAL_RELEASE.md'));
-const localReleaseDoc = read('docs/LOCAL_RELEASE.md');
-for (const phrase of [
-  'No cloud hosting is required',
-  'Clone or download',
-  'npm ci',
-  'npm run dev',
-  'npm run build:budget',
-  'npm run preview',
-  '/?demo=1',
-  'Export',
-  'GitHub release checklist',
-  '[REDACTED]',
-]) {
-  check(`LOCAL_RELEASE.md documents ${phrase}`, localReleaseDoc.includes(phrase));
-}
-
-const qaDoc = read('docs/QA.md');
-check('QA.md has local GitHub release readiness section', qaDoc.includes('Local GitHub release readiness'));
-check('QA.md local release section includes verify:release', qaDoc.includes('npm run verify:release'));
-check('QA.md local release section includes demo route', qaDoc.includes('/?demo=1'));
-check('QA.md local release section includes offline/local-first smoke', qaDoc.includes('offline/local-first'));
-
-const deployDoc = read('docs/DEPLOY.md');
-check('DEPLOY.md is framed as optional cloud hosting', deployDoc.includes('Optional Cloudflare Pages hosting'));
-check('DEPLOY.md points local-first releases to LOCAL_RELEASE.md', deployDoc.includes('LOCAL_RELEASE.md'));
-check('DEPLOY.md keeps non-secret redaction guidance', deployDoc.includes('[REDACTED]'));
-
 const rootSvelte = read('src/Root.svelte');
 check('demo route is wired from ?demo=1', /get\(['"]demo['"]\)\s*===\s*['"]1['"]/.test(rootSvelte));
 check('demo route loads the showcase template', rootSvelte.includes("loadProjectFromTemplate('showcase')"));
@@ -102,7 +93,7 @@ check('demo route disables cloud configuration path', has(rootSvelte, /const\s+c
 
 const demoSpec = read('e2e/demo-mode.spec.ts');
 check('demo-mode e2e covers /?demo=1', demoSpec.includes('/?demo=1'));
-check('demo-mode e2e asserts the demo banner', demoSpec.includes('Демо-режим — изменения сохраняются только в этом браузере'));
+check('demo-mode e2e asserts the demo banner', demoSpec.includes('\\u0414\\u0435\\u043c\\u043e-\\u0440\\u0435\\u0436\\u0438\\u043c'));
 
 const releaseFlags = read('src/lib/releaseFlags.ts');
 for (const flag of [

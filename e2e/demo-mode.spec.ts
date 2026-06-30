@@ -14,11 +14,11 @@ test.describe('demo mode', () => {
     await page.goto('/?demo=1');
     await expect(page.locator('.frame').first()).toBeVisible({ timeout: 60_000 });
     await expect(page.locator('.frame')).toHaveCount(3);
-    await expect(page.getByText('Демо-режим — изменения сохраняются только в этом браузере')).toBeVisible();
+    await expect(page.getByText('\u0414\u0435\u043c\u043e-\u0440\u0435\u0436\u0438\u043c — \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u044d\u0442\u043e\u043c \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435')).toBeVisible();
     await expect(page.getByRole('button', { name: /↓ Frame|Export current page/i }).first()).toBeEnabled();
 
     await page.goto('/');
     await expect(page.locator('.frame').first()).toBeVisible({ timeout: 60_000 });
-    await expect(page.getByText('Демо-режим — изменения сохраняются только в этом браузере')).toHaveCount(0);
+    await expect(page.getByText('\u0414\u0435\u043c\u043e-\u0440\u0435\u0436\u0438\u043c — \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u044d\u0442\u043e\u043c \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435')).toHaveCount(0);
   });
 });
